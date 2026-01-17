@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pr19_elik.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace pr19_elik
         public MainWindow()
         {
             InitializeComponent();
+            new KinoteatrContext(0, "test", 12, 12).Add();
         }
     }
 }

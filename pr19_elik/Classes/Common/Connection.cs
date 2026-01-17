@@ -9,9 +9,9 @@ namespace pr19_elik.Classes.Common
 {
     public class Connection
     {
-        public static readonly string config = "server=10.0.204.1;uid=root;pwd=;database=kino;";
+        public static readonly string config = "server=127.0.0.1;uid=root;pwd=;database=kino;";
 
-        public MySqlConnection OpenConnection()
+        public static MySqlConnection OpenConnection()
         {
             MySqlConnection connection = new MySqlConnection(config);
             connection.Open();
@@ -19,12 +19,12 @@ namespace pr19_elik.Classes.Common
             return connection;
         }
 
-        public MySqlDataReader Query(string SQL, MySqlConnection connection)
+        public static MySqlDataReader Query(string SQL, MySqlConnection connection)
         {
             return new MySqlCommand(SQL, connection).ExecuteReader();
         }
 
-        public void CloseConnection(MySqlConnection connection)
+        public static void CloseConnection(MySqlConnection connection)
         {
             connection.Close();
             MySqlConnection.ClearPool(connection);
