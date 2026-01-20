@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="pr19_elik.Pages.Kinoteatr.Items.Item"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:pr19_elik.Pages.Kinoteatr.Items"
+             mc:Ignorable="d" Width="742">
+    <Grid Background="Gainsboro">
+       
+
+        <Image Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Source="/Image/icon.png"
+Margin="45,25,0,0"
+ />
+        <Label Content="Наименование:" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="178,28,0,0"/>
+        <TextBox IsEnabled="False" x:Name="name" Height="25" Margin="165,59,408,366"/>
+        <Label Content="Количество залов:"  VerticalAlignment="Top" Margin="176,90,0,0" HorizontalAlignment="Left" Width="224"/>
+        <TextBox IsEnabled="False" x:Name="countZal" Height="25" Margin="164,112,408,313"/>
+        <Label Content="Количество:" VerticalAlignment="Top" Margin="380,26,0,0" HorizontalAlignment="Left" Width="121"/>
+        <TextBox IsEnabled="False" x:Name="count" Height="25" Margin="378,59,219,366"/>
+        <Button Click="EditRecord"  Content="Изменить" Height="25" Margin="39,143,603,282" Background="Green"/>
+        <Button  Content="Удалить" Height="25" Margin="40,173,602,252" Background="#FFC03812"/>
+    </Grid>
+
+</UserControl>

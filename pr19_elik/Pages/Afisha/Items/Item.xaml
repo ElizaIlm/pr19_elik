@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="pr19_elik.Pages.Afisha.Items.Item"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:pr19_elik.Pages.Afisha.Items"
+             mc:Ignorable="d" Height="469">
+    <Grid Background="Gainsboro">
+        <Grid Margin="10,10,10,107" Background="White">
+           
+        </Grid>
+
+        <Image Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Source="/Image/i3.png"
+Margin="25"
+ />
+        <Label Content="кинотеатр:" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="178,28,0,0"/>
+        <TextBox IsEnabled="False" x:Name="name" Height="25" Margin="162,130,366,313"/>
+        <TextBox  x:Name="kinoteatrs" Height="25" Margin="162,64,366,380" IsEnabled="False" Background="#FFFCF8F8"/>
+
+        <Label Content="наименование:"  VerticalAlignment="Top" Margin="176,90,0,0" HorizontalAlignment="Left" Width="224"/>
+        <Label Content="Дата:" VerticalAlignment="Top" Margin="463,32,0,0" HorizontalAlignment="Left" Width="273"/>
+        <DatePicker x:Name="date"  Height="25" Margin="461,58,235,0" VerticalAlignment="Top"/>
+        <TextBox IsEnabled="False" x:Name="price" Height="25" Margin="461,128,64,315"/>
+        <Label Content="Стоимость:" VerticalAlignment="Top" Margin="463,90,0,0" HorizontalAlignment="Left" Width="273"/>
+        <TextBox IsEnabled="False" x:Name="time" VerticalAlignment="Top"  Height="25" Margin="598,60,64,0" Width="138"/>
+        <Button Click="EditRecord"  Content="Изменить" Height="25" Margin="21,139,679,286" Background="Green"/>
+        <Button  Content="Удалить" Height="25" Margin="21,173,679,252" Background="#FFC03812"/>
+    </Grid>
+</UserControl>

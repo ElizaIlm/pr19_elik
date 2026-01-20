@@ -14,25 +14,28 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace pr19_elik
+namespace pr19_elik.Pages.Kinoteatr
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Main.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Main : Page
     {
-        public static MainWindow init;
-        public MainWindow()
+        List<KinoteatrContext> AllKinoteatrs = KinoteatrContext.Select();
+
+        public Main()
         {
             InitializeComponent();
-            
-            OpenPage(new Pages.Afisha.Main());
-            init = this;
-        }
-        public void OpenPage(Page Page)
-        {
-            frame.Navigate(Page);
+
+            foreach (KinoteatrContext item in AllKinoteatrs)
+            {
+                parent.Children.Add(new Items.Item(item));
+            }
         }
 
+        private void AddRecord(object sender, RoutedEventArgs e)
+        {
+            MainWindow.init.OpenPage(new Pages.Kinoteatr.Add());
+        }
     }
 }

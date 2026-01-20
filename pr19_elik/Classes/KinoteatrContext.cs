@@ -12,7 +12,24 @@ namespace pr19_elik.Classes
     public class KinoteatrContext : Kinoteatr
     {
         public KinoteatrContext(int Id, string Name, int CountZal, int Count) : base(Id, Name, CountZal, Count) { }
-
+        public static List<KinoteatrContext> Select()
+        {
+            List<KinoteatrContext> AllKinoteatrs = new List<KinoteatrContext>();
+            string SQL = "SELECT * FROM `kinoteatr`;";
+            MySqlConnection connection = Connection.OpenConnection();
+            MySqlDataReader Data = Connection.Query(SQL, connection);
+            while (Data.Read())
+            {
+                AllKinoteatrs.Add(new KinoteatrContext(
+                    Data.GetInt32(0),
+                    Data.GetString(1),
+                    Data.GetInt32(2),
+                    Data.GetInt32(3)
+                ));
+            }
+            Connection.CloseConnection(connection);
+            return AllKinoteatrs;
+        }
         public void Add()
         {
             string SQL = "INSERT INTO " +
@@ -30,14 +47,14 @@ namespace pr19_elik.Classes
         }
         public void Update()
         {
-            string SQL = "UPDATE " +
-                "`kinoteatr` " +
-                "SET " +
-                $"'name'='{this.Name}', " +
-                $"'count_zal'={this.CountZal}, " +
-                $"'count'={this.Count} " +
-                "WHERE " +
-                $"'id'={this.Id}";
+            string SQL = "UPDATE `kinoteatr` " +
+                         "SET " +
+                         $"`name` = '{this.Name}', " +
+                         $"`count_zal` = {this.CountZal}, " +
+                         $"`count` = {this.Count} " +
+                         "WHERE " +
+                         $"`id` = {this.Id}";
+
             MySqlConnection connection = Connection.OpenConnection();
             Connection.Query(SQL, connection);
             Connection.CloseConnection(connection);
