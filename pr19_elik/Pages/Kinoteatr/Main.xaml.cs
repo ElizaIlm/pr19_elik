@@ -29,7 +29,7 @@ namespace pr19_elik.Pages.Kinoteatr
 
             foreach (KinoteatrContext item in AllKinoteatrs)
             {
-                parent.Children.Add(new Items.Item(item));
+                parent.Children.Add(new Items.Item(item, this));
             }
         }
 

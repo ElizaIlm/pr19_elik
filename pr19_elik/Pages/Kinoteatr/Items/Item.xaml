@@ -18,7 +18,7 @@ Margin="45,25,0,0"
         <Label Content="Количество:" VerticalAlignment="Top" Margin="380,26,0,0" HorizontalAlignment="Left" Width="121"/>
         <TextBox IsEnabled="False" x:Name="count" Height="25" Margin="378,59,219,366"/>
         <Button Click="EditRecord"  Content="Изменить" Height="25" Margin="39,143,603,282" Background="Green"/>
-        <Button  Content="Удалить" Height="25" Margin="40,173,602,252" Background="#FFC03812"/>
+        <Button  Content="Удалить" Click="DeleteRecord" Height="25" Margin="40,173,602,252" Background="#FFC03812"/>
     </Grid>
 
 </UserControl>

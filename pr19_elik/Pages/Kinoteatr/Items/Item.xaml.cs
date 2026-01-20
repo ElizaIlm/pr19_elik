@@ -1,4 +1,6 @@
 ﻿using pr19_elik.Classes;
+using pr19_elik.Pages.Afisha.Items;
+using pr19_elik.Pages.Afisha;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,16 +24,24 @@ namespace pr19_elik.Pages.Kinoteatr.Items
     public partial class Item : UserControl
     {
         KinoteatrContext Kinoteatr;
-        public Item(KinoteatrContext Kinoteatr)
+        Main main;
+        public Item(KinoteatrContext Kinoteatr, Main main)
         {
             InitializeComponent();
             name.Text = Kinoteatr.Name;
             countZal.Text = Kinoteatr.CountZal.ToString();
             count.Text = Kinoteatr.Count.ToString();
             this.Kinoteatr = Kinoteatr;
+            this.main = main;
         }
 
         private void EditRecord(object sender, RoutedEventArgs e) =>
             MainWindow.init.OpenPage(new Pages.Kinoteatr.Add(this.Kinoteatr));
+
+        private void DeleteRecord(object sender, RoutedEventArgs e)
+        {
+            Kinoteatr.Delete();
+            main.parent.Children.Remove(this);
+        }
     }
 }

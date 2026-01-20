@@ -51,7 +51,67 @@ namespace pr19_elik.Pages.Afisha
 
         private void AddRecord(object sender, RoutedEventArgs e)
         {
+            DateTime dateAfisha;
+            TimeSpan timeAfisha;
+            int Price = -1;
 
+            if (name.Text == "")
+            {
+                MessageBox.Show("Необходимо указать наименование");
+                return;
+            }
+
+            if (kinoteatrs.SelectedIndex == kinoteatrs.Items.Count - 1)
+            {
+                MessageBox.Show("Выберите кинотеатр");
+                return;
+            }
+
+            if (date.Text == "")
+            {
+                MessageBox.Show("Необходимо указать дату");
+                return;
+            }
+
+            if (time.Text == "" || TimeSpan.TryParse(time.Text, out timeAfisha) == false)
+            {
+                MessageBox.Show("Необходимо указать время");
+                return;
+            }
+
+            if (price.Text == "" || int.TryParse(price.Text, out Price) == false)
+            {
+                MessageBox.Show("Необходимо указать стоимость");
+                return;
+            }
+
+            DateTime.TryParse(date.Text, out dateAfisha);
+            dateAfisha.Add(timeAfisha);
+
+            if (afisha == null)
+            {
+                AfishaContext newAfisha = new AfishaContext(
+                    0,
+                    AllKinoteats.Find(x => x.Name == kinoteatrs.SelectedItem).Id,
+                    name.Text,
+                    dateAfisha,
+                    Price);
+                newAfisha.Add();
+                MessageBox.Show("Запись успешно добавлена.");
+            }
+            else
+            {
+                afisha = new AfishaContext(
+                    afisha.Id,
+                    AllKinoteats.Find(x => x.Name == kinoteatrs.SelectedItem).Id,
+                    name.Text,
+                    dateAfisha,
+                    Price);
+                afisha.Update();
+                MessageBox.Show("Запись успешно обновлена.");
+            }
+
+            MainWindow.init.OpenPage(new Pages.Afisha.Main());
         }
     }
 }

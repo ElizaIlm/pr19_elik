@@ -24,6 +24,6 @@ Margin="25"
         <Label Content="Стоимость:" VerticalAlignment="Top" Margin="463,90,0,0" HorizontalAlignment="Left" Width="273"/>
         <TextBox IsEnabled="False" x:Name="time" VerticalAlignment="Top"  Height="25" Margin="598,60,64,0" Width="138"/>
         <Button Click="EditRecord"  Content="Изменить" Height="25" Margin="21,139,679,286" Background="Green"/>
-        <Button  Content="Удалить" Height="25" Margin="21,173,679,252" Background="#FFC03812"/>
+        <Button  Content="Удалить" Click="DeleteRecord" Height="25" Margin="21,173,679,252" Background="#FFC03812"/>
     </Grid>
 </UserControl>
