@@ -4,16 +4,15 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:pr19_elik.Pages.Kinoteatr"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Main">
+      mc:Ignorable="d" d:DesignWidth="800"
+      Title="Main" Height="521">
 
-    <Grid>
-        <ScrollViewer Margin="5,5,5,40">
+    <Grid Margin="0,0,0,-42">
+        <ScrollViewer Margin="5,5,5,110">
             <StackPanel x:Name="parent">
 
             </StackPanel>
         </ScrollViewer>
-        <Button Click="AddRecord"   Content="Добавить" Margin="0,0,10,10" Background="Green" HorizontalAlignment="Right" Width="113" Height="36" VerticalAlignment="Bottom"/>
+        <Button Click="AddRecord"   Content="Добавить" Margin="0,0,30,124" Background="Green" HorizontalAlignment="Right" Width="113" Height="36" VerticalAlignment="Bottom"/>
     </Grid>
 </Page>

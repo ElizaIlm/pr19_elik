@@ -4,26 +4,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:pr19_elik.Pages.Afisha.Items"
-             mc:Ignorable="d" Height="469">
-    <Grid Background="Gainsboro">
-        <Grid Margin="10,10,10,107" Background="White">
-           
-        </Grid>
+             mc:Ignorable="d" Height="236">
+    <Grid Background="Gainsboro" Height="234" VerticalAlignment="Top">
+        <Grid Background="White" Height="224" VerticalAlignment="Center"/>
 
-        <Image Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Source="/Image/i3.png"
-Margin="25"
+        <Image Height="80" VerticalAlignment="Top" Source="/Image/i3.png"
+Margin="13,25,0,0" HorizontalAlignment="Left" Width="80"
  />
-        <Label Content="кинотеатр:" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="178,28,0,0"/>
-        <TextBox IsEnabled="False" x:Name="name" Height="25" Margin="162,130,366,313"/>
-        <TextBox  x:Name="kinoteatrs" Height="25" Margin="162,64,366,380" IsEnabled="False" Background="#FFFCF8F8"/>
+        <Label Content="кинотеатр:" VerticalAlignment="Top" Margin="156,28,0,0" HorizontalAlignment="Left" Width="69"/>
+        <TextBox IsEnabled="False" x:Name="name" Height="25" Margin="140,130,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="230"/>
+        <TextBox  x:Name="kinoteatrs" Height="25" Margin="140,64,0,0" IsEnabled="False" Background="#FFFCF8F8" VerticalAlignment="Top" HorizontalAlignment="Left" Width="230"/>
 
-        <Label Content="наименование:"  VerticalAlignment="Top" Margin="176,90,0,0" HorizontalAlignment="Left" Width="224"/>
+        <Label Content="наименование:"  VerticalAlignment="Top" Margin="154,90,0,0" HorizontalAlignment="Left" Width="224"/>
         <Label Content="Дата:" VerticalAlignment="Top" Margin="463,32,0,0" HorizontalAlignment="Left" Width="273"/>
-        <DatePicker x:Name="date"  Height="25" Margin="461,58,235,0" VerticalAlignment="Top"/>
-        <TextBox IsEnabled="False" x:Name="price" Height="25" Margin="461,128,64,315"/>
+        <DatePicker x:Name="date"  Height="25" Margin="461,58,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
+        <TextBox IsEnabled="False" x:Name="price" Height="25" Margin="461,128,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="261"/>
         <Label Content="Стоимость:" VerticalAlignment="Top" Margin="463,90,0,0" HorizontalAlignment="Left" Width="273"/>
-        <TextBox IsEnabled="False" x:Name="time" VerticalAlignment="Top"  Height="25" Margin="598,60,64,0" Width="138"/>
-        <Button Click="EditRecord"  Content="Изменить" Height="25" Margin="21,139,679,286" Background="Green"/>
-        <Button  Content="Удалить" Click="DeleteRecord" Height="25" Margin="21,173,679,252" Background="#FFC03812"/>
+        <TextBox IsEnabled="False" x:Name="time" VerticalAlignment="Top"  Height="25" Margin="584,60,0,0" Width="138" HorizontalAlignment="Left"/>
+        <Button Click="EditRecord"  Content="Изменить" Height="25" Margin="21,134,0,0" Background="Green" VerticalAlignment="Top" HorizontalAlignment="Left" Width="58"/>
+        <Button  Content="Удалить" Click="DeleteRecord" Height="25" Margin="21,172,0,0" Background="#FFC03812" VerticalAlignment="Top" HorizontalAlignment="Left" Width="58"/>
     </Grid>
 </UserControl>

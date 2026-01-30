@@ -4,21 +4,21 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:pr19_elik.Pages.Kinoteatr.Items"
-             mc:Ignorable="d" Width="742">
-    <Grid Background="Gainsboro">
-       
+             mc:Ignorable="d" Width="742" Height="224">
+    <Grid Background="Gainsboro" Margin="0,0,0,10" Height="202" VerticalAlignment="Bottom">
+
 
         <Image Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Source="/Image/icon.png"
 Margin="45,25,0,0"
  />
         <Label Content="Наименование:" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="178,28,0,0"/>
-        <TextBox IsEnabled="False" x:Name="name" Height="25" Margin="165,59,408,366"/>
+        <TextBox IsEnabled="False" x:Name="name" Margin="165,59,0,0" HorizontalAlignment="Left" Width="169" Height="25" VerticalAlignment="Top"/>
         <Label Content="Количество залов:"  VerticalAlignment="Top" Margin="176,90,0,0" HorizontalAlignment="Left" Width="224"/>
-        <TextBox IsEnabled="False" x:Name="countZal" Height="25" Margin="164,112,408,313"/>
+        <TextBox IsEnabled="False" x:Name="countZal" Margin="164,112,0,0" HorizontalAlignment="Left" Width="170" Height="25" VerticalAlignment="Top"/>
         <Label Content="Количество:" VerticalAlignment="Top" Margin="380,26,0,0" HorizontalAlignment="Left" Width="121"/>
-        <TextBox IsEnabled="False" x:Name="count" Height="25" Margin="378,59,219,366"/>
-        <Button Click="EditRecord"  Content="Изменить" Height="25" Margin="39,143,603,282" Background="Green"/>
-        <Button  Content="Удалить" Click="DeleteRecord" Height="25" Margin="40,173,602,252" Background="#FFC03812"/>
+        <TextBox IsEnabled="False" x:Name="count" Margin="378,59,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="145"/>
+        <Button Click="EditRecord"  Content="Изменить" Height="25" Margin="0,137,603,0" Background="Green" HorizontalAlignment="Right" Width="100" VerticalAlignment="Top"/>
+        <Button  Content="Удалить" Click="DeleteRecord" Height="25" Margin="0,167,602,0" Background="#FFC03812" VerticalAlignment="Top" HorizontalAlignment="Right" Width="100"/>
     </Grid>
 
 </UserControl>
